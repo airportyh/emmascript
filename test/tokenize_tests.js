@@ -1,7 +1,7 @@
 "use strict"
 
-let assert = require('assert')
-let tokenize = require('../tokenize')
+const assert = require('assert')
+const tokenize = require('../tokenize')
 
 test('number', function(){
   assert.deepEqual(
