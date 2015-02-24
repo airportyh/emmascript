@@ -11,10 +11,13 @@ test('number', function(){
 })
 
 test('operator', function(){
-  assert.deepEqual(
-    gen2arr(tokenize('+')),
-    [{type: 'operator', value: '+'}]
-  )
+  let operators = ['+', '-', '*', '/']
+  operators.forEach(function(op){
+    assert.deepEqual(
+      gen2arr(tokenize(op)),
+      [{type: 'operator', value: op}]
+    )
+  })
 })
 
 function gen2arr(gen){

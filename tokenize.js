@@ -16,7 +16,7 @@ function Tokenizer(source){
       let ch = source.charAt(idx)
       if (isDigit()){ // digit
         yield {type: 'number', value: advanceNumber()}
-      }else if (ch === '+'){
+      }else if (ch === '+' || ch === '-' || ch === '/' || ch === '*'){
         yield {type: 'operator', value: ch}
         idx++
       }else{
