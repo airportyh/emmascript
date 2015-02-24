@@ -1,0 +1,25 @@
+{
+  "name": "emmascript",
+  "version": "1.0.0",
+  "description": "EmmaScript is programming language in the flavor of JavaScript. It's goals are to be simple and debuggable.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airportyh/emmascript.git"
+  },
+  "keywords": [
+    "language"
+  ],
+  "author": "Toby Ho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airportyh/emmascript/issues"
+  },
+  "homepage": "https://github.com/airportyh/emmascript"
+}
