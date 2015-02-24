@@ -20,6 +20,16 @@ test('operator', function(){
   })
 })
 
+test('multiple tokens', function(){
+  assert.deepEqual(
+    gen2arr(tokenize('1+2')),
+    [{type: 'number', value: 1},
+     {type: 'operator', value: '+'},
+     {type: 'number', value: 2}
+    ]
+  )
+})
+
 function gen2arr(gen){
   let arr = []
   for (let item of gen){
