@@ -13,9 +13,12 @@ function Tokenizer(source){
 
   function *tokenize(){
     while (idx < source.length){
-      let ch = source.charCodeAt(idx)
-      if (isDigit(ch)){ // digit
+      let ch = source.charAt(idx)
+      if (isDigit()){ // digit
         yield {type: 'number', value: advanceNumber()}
+      }else if (ch === '+'){
+        yield {type: 'operator', value: ch}
+        idx++
       }else{
         throw new Error('Unexpected character: ' + ch)
       }
@@ -23,7 +26,8 @@ function Tokenizer(source){
   }
 
   function isDigit(ch){
-    return ch >= 48 && ch <= 57
+    let code = source.charCodeAt(idx)
+    return code >= 48 && code <= 57
   }
 
   function advanceNumber(){
