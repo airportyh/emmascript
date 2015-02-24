@@ -19,6 +19,8 @@ function Tokenizer(source){
       }else if (ch === '+' || ch === '-' || ch === '/' || ch === '*'){
         yield {type: 'operator', value: ch}
         idx++
+      }else if (ch === ' ' || ch === '\t'){
+        idx++
       }else{
         throw new Error('Unexpected character: ' + ch)
       }
