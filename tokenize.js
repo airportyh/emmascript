@@ -25,7 +25,7 @@ function Tokenizer(source){
     }
   }
 
-  function isDigit(ch){
+  function isDigit(){
     let code = source.charCodeAt(idx)
     return code >= 48 && code <= 57
   }
