@@ -10,7 +10,7 @@ test('number', function(){
   )
 })
 
-test('binary expression', function(){
+test.skip('binary expression', function(){
   assert.deepEqual(
     parse('1 + 2'),
     {
